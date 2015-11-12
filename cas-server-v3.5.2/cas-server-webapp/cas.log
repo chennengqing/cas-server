@@ -1,0 +1,350 @@
+2015-11-02 18:16:05,106 ERROR [org.jasig.cas.web.init.SafeContextLoaderListener] - SafeContextLoaderListener: 
+The Spring ContextLoaderListener we wrap threw on contextInitialized.
+But for our having caught this error, the web application context would not have initialized.
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'propertyConfigurer' defined in ServletContext resource [/WEB-INF/spring-configuration/propertyFileConfigurer.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'loadDiamond' of bean class [com.appleframework.config.diamond.spring.ExtendedPropertyPlaceholderConfigurer]: Bean property 'loadDiamond' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:644)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:446)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.jasig.cas.web.init.SafeContextLoaderListener.contextInitialized(SafeContextLoaderListener.java:75)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'loadDiamond' of bean class [com.appleframework.config.diamond.spring.ExtendedPropertyPlaceholderConfigurer]: Bean property 'loadDiamond' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1064)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:924)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393)
+	... 23 more
+2015-11-02 18:18:16,389 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=null
+2015-11-02 18:18:16,389 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=null
+2015-11-02 18:18:16,399 ERROR [org.jasig.cas.web.init.SafeContextLoaderListener] - SafeContextLoaderListener: 
+The Spring ContextLoaderListener we wrap threw on contextInitialized.
+But for our having caught this error, the web application context would not have initialized.
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in ServletContext resource [/WEB-INF/deployerConfigContext.xml]: Could not resolve placeholder 'jdbc.driver'
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:209)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:220)
+	at com.appleframework.config.ExtendedPropertyPlaceholderConfigurer.processProperties(ExtendedPropertyPlaceholderConfigurer.java:93)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:84)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:681)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:656)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:446)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.jasig.cas.web.init.SafeContextLoaderListener.contextInitialized(SafeContextLoaderListener.java:75)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+2015-11-02 18:18:45,572 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:18:45,573 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:18:45,574 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:18:45,785 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-02 18:18:48,629 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:18:48,629 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:18:48,629 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:18:48,629 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-02 18:19:10,266 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:19:10,266 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:19:10,268 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:19:10,371 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-02 18:19:12,780 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:19:12,780 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:19:12,780 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:19:12,780 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-02 18:29:19,516 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:29:19,517 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:29:19,519 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:29:19,618 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-02 18:29:21,828 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-02 18:29:21,828 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-02 18:29:21,828 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-02 18:29:21,828 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.1.189:3366/jz_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=dba
+jdbc.password=mysql
+
+#cas
+server.name=http://192.168.1.177:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 16:46:58,456 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 16:46:58,470 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-03 16:46:58,472 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=cnq
+2015-11-03 16:46:58,682 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 16:47:01,429 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 16:47:01,429 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cas-server
+2015-11-03 16:47:01,429 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=cnq
+2015-11-03 16:47:01,430 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 16:53:10,962 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 16:53:10,962 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 16:53:10,964 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 16:53:11,065 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 16:53:13,446 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 16:53:13,446 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 16:53:13,446 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 16:53:13,447 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 17:18:31,741 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 17:18:31,741 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 17:18:31,743 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 17:18:31,843 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 17:18:34,217 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 17:18:34,218 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 17:18:34,218 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 17:18:34,218 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 17:52:40,670 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 17:52:40,670 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 17:52:40,672 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 17:52:40,771 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-03 17:52:43,154 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-03 17:52:43,154 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-03 17:52:43,154 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-03 17:52:43,154 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-12 16:14:32,768 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-12 16:14:32,779 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-12 16:14:32,780 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-12 16:14:32,955 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
+2015-11-12 16:14:36,326 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：group=common
+2015-11-12 16:14:36,326 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：dataId=cnq-cas-server
+2015-11-12 16:14:36,326 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项：env=dev
+2015-11-12 16:14:36,327 WARN [com.appleframework.config.ExtendedPropertyPlaceholderConfigurer] - 配置项内容: 
+#jdbc
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/cnq_boss?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+jdbc.username=root
+jdbc.password=root
+
+#cas
+server.name=http://127.0.0.1:8134/cas
+host.name=localhost
+cas.password.validate.date=90
+
+#boss
+boss.url=http://localhost:8135/main
+
